@@ -84,8 +84,3 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker3:49092
   
-# spin up server: docker-compose up -d
-# create a topic: docker exec <brokerName> kafka-topics --bootstrap-server <brokerName>:<brokerHost> --create --topic <name>
-# writing to topic: docker exec --interactive --tty <brokerName> kafka-console-producer --bootstrap-server <brokerName>:<brokerHost> --topic <name>
-# read topic: docker exec --interactive --tty <brokerName> kafka-console-consumer --bootstrap-server <brokerName>:<brokerHost> --topic <name> --from-beginning
-# teardown server: docker-compose down 
