@@ -40,13 +40,13 @@ docker exec zookeeper1 kafka-topics --bootstrap-server broker1:29092 --topic qui
 docker exec --interactive --tty broker1 kafka-console-producer --bootstrap-server broker1:29092 --topic quickstart
 ```
 
-To start a consumer:
+### To start a consumer:
 
 ```
 docker exec --interactive --tty broker1 kafka-console-consumer --bootstrap-server broker1:29092 --topic quickstart --from-beginning
 ```
 
-Teardown:
+### Teardown:
 
 ```
 docker-compose down
